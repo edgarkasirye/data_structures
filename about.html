@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="left-side">
+
+                <div class="nav-linkwrapper">
+                    <a href="index.html">Home</a>
+                </div>
+                
+                <div class="nav-linkwrapper">
+                    <a href="about.html">About</a>
+                </div>
+                
+            </div>
+
+            <div class="right-side">
+                <div class="brand">
+                    <div>EDGAR KASIRYE</div>
+                </div>
+                
+            </div>
+        </div>    
+
+            <div class="content-wrapper">
+                <div class="two-column-wrapper">
+                    <div class="profile-image-wrapper">
+                        <img src="images/profile.jpg">
+                    </div>
+
+                    <div class="profile-content-wrapper">
+
+                    </div>
+                </div>
+            </div>
+        </div>   
+</body>
+
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+    
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', ()=> {
+                 portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
+</html>
